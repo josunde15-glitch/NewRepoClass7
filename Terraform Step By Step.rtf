@@ -1,0 +1,198 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Arial-BoldMT;\f2\fswiss\fcharset0 ArialMT;
+\f3\fswiss\fcharset0 Helvetica;\f4\fmodern\fcharset0 Courier;\f5\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red10\green10\blue10;\red223\green232\blue255;
+\red85\green142\blue40;\red16\green60\blue192;}
+{\*\expandedcolortbl;;\csgray\c0\c0;\cssrgb\c3922\c3922\c3922;\cssrgb\c89804\c92941\c100000;
+\cssrgb\c39975\c61335\c20601;\cssrgb\c6667\c33333\c80000;}
+\margl1440\margr1440\vieww19100\viewh19140\viewkind0
+\deftab720
+\pard\pardeftab720\qc\partightenfactor0
+
+\f0\b\fs28 \cf0 \cb2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qc\partightenfactor0
+\cf0 \cb1 \
+\ul Terraform Note\ulnone \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs29\fsmilli14667 \cf0 \expnd0\expndtw0\kerning0
+On a Windows:
+\f2\b0 \
+	- 
+\f1\b Download
+\f2\b0  the terraform executable file from www.terraform.io website.\
+	- Select your preferred Operating system (windows 64 bit). \
+	- Extract the file from the zipped folder. Remember the occasion of this file.\
+	- open up command prompt and enter #terraform -v to get the version of TF you are running\
+\
+
+\f1\b On a MAC computer:
+\f2\b0 \
+	- navigate to the website www.brew.sh and user the install homebrew link (/bin/bash -c \'93$(curl -fsSL http://raw.github\'85\'85..)\
+	- Copy the link and execute in terminal to download home-brew on your device\
+	- Now that home-brew is installed you can now install Terraform with this command 
+\f1\b #brew install terraform\
+	
+\f2\b0 - Verify that the install was successful by using #terraform -v to get the version of TF you are running\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf0 Prerequisites:
+\f2\b0 \
+	-Create a folder with all Terraform files that have been successful and save it under todays date. \
+	-Also include the user_data.sh and .gitignore file\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\
+Download VS code and open command line within VS code to the folder you created for Terraform\
+	- Create a file \'93Main\'94 and define a provider for AWS and a region\
+	- Log into AWS and get your access keys and secrete key
+\f0\b\fs28 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0 \cf0 \expnd0\expndtw0\kerning0
+1: Ensure that AWS Agent is installed correctly.\
+	- In command line type:
+\f1\b\fs29\fsmilli14667  # aws configure
+\f0\fs28 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f3\b0 \cf0 	Enter your AWS Access Key and AWS Secret Access Key
+\f0\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+To verify you are logged into AWS as you enter this command\
+\pard\pardeftab720\partightenfactor0
+
+\f4\b0\fs32 \cf3 \cb4 \expnd0\expndtw0\kerning0
+	#aws sts get-caller-identity
+\f0\b\fs28 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs29\fsmilli14667 \cf0 \expnd0\expndtw0\kerning0
+2: Ensure that Terraform is installed
+\f5\fs24 \
+
+\f2\fs29\fsmilli14667 	Type: 
+\f1\b #terraform --version
+\f0\fs28 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f3\b0 \cf0 3. Update terraform to the latest version
+\f0\b \
+
+\f3\b0 	Type:
+\f0\b  #brew update && brew upgrade \
+	Or\
+	#\cf5 terraform init \cf0 -upgrade\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs29\fsmilli14667 \cf0 \expnd0\expndtw0\kerning0
+4. Make a directory, cd into it, and then verify that you are in the correct directory\
+	Type: 
+\f1\b #mkdir  2025oct14 && cd
+\f2\b0  
+\f1\b 2025oct14
+\f5\b0\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\b\fs28 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs29\fsmilli14667 \cf0 \expnd0\expndtw0\kerning0
+5. Create a file named {\field{\*\fldinst{HYPERLINK "http://0-authentication.tf/"}}{\fldrslt \cf6 \ul \ulc6 0-authentication.tf}}\'a0 and verify that the file has been created
+\f3\fs28 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 	#touch  0-auth.tf
+\f3\b0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs29\fsmilli14667 \cf0 \expnd0\expndtw0\kerning0
+6. Type Code . in the prompt to open Visual Studio Code
+\f3\fs28 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 	#code .
+\f3\b0  \
+\
+7. Open up the  terminal in terraform and navigate to the 2025oct14 folder you created initialized with this command\
+
+\f0\b 	#terraform init\
+	
+\f3\b0 This creates
+\f0\b  .terraform.lock.hcl 
+\f3\b0 and
+\f0\b  .terraform 
+\f3\b0 hidden files DO NOT DELETE or touch these files\
+\
+8. Enter this command\
+	- # curl -O https://raw.githubusercontent.com/aaron-dm-mcdonald/aws-image-resizer/refs/heads/main/.gitignore\
+	- This downloads
+\f0\b  .gitignore  
+\f3\b0 hidden files DO NOT DELETE or touch these files\
+\
+9. Enter 
+\f0\b #\cf5 terraform validate\cf0 \
+	- 
+\f3\b0 If you see 
+\f0\b Success
+\f3\b0  that means your config is correct \
+\
+10. Now type 
+\f0\b #\cf5 terraform plan\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f3\b0 \cf0 11. Type
+\f0\b  #\cf5 terraform apply\cf0 \
+\
+
+\f3\b0 	- This creates
+\f0\b  terraform.tfstate 
+\f3\b0 hidden files DO NOT DELETE or touch these files\
+	- The state file looks at all the changes you are making in AWS\
+\
+12.  Show the current state of you AWS VPC settings\
+	- # 
+\f0\b terraform state 
+\f3\b0 show aws_vpc.main\
+\
+13. #\cf5 terraform destroy \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+Code Blocks in Terraform:\
+\
+	Provider\
+	resource\
+	Output\
+\
+\
+\
+\
+\
+}
